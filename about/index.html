@@ -178,23 +178,44 @@ Awards 한국지능정보사회진흥원(NIA) - 데이터 크리에이터 캠프
 
   </div>
 
-  <script src="https://giscus.app/client.js"
-    data-repo="WooHyeok-Moon/blog-comments"
-    data-repo-id="R_kgDOJrdphg"
-    data-category="Comments"
-    data-category-id="DIC_kwDOJrdphs4CXA2h"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="ko"
-    crossorigin="anonymous"
-    async>
-  </script>
-
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+    
+  </footer>
+  <div class="container_disqus">
+      <script src="https://giscus.app/client.js"
+          data-repo=WooHyeok-Moon/blog-comments
+          data-repo-id=R_kgDOJrdphg
+          data-category=Comments
+          data-category-id=DIC_kwDOJrdphs4CXA2h
+          data-mapping=pathname
+          data-reactions-enabled=1
+          data-emit-metadata=0
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="ko"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+      </script>
+  </div>
+  <script async>
+      document.querySelector("div.container_disqus > script").setAttribute('data-theme', localStorage.getItem('pref-theme') ? localStorage.getItem('pref-theme') : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
   
+      document.querySelector('#theme-toggle').addEventListener('click', () => {
+          let g = document.querySelector('iframe.giscus-frame')
+          if (g) {
+              g.contentWindow.postMessage({
+                  giscus: {
+                      setConfig: {
+                          theme: localStorage.getItem('pref-theme') ? ((localStorage.getItem('pref-theme') === 'dark') ? 'light': 'dark') : (document.body.className.includes("dark") ? 'light' : 'dark')
+                      }
+                  }
+              }, 'https://giscus.app');
+          }
+      })
+  </script>
 </article>
     </main>
     
