@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Axiomize</title>
+    <link>https://WooHyeok-Moon.github.io/</link>
+    <description>Recent content on Axiomize</description>
+    <image>
+      <title>Axiomize</title>
+      <url>https://WooHyeok-Moon.github.io/papermod-cover.png</url>
+      <link>https://WooHyeok-Moon.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr</language>
+    <lastBuildDate>Tue, 11 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>머신러닝 목차</title>
+      <link>https://WooHyeok-Moon.github.io/posts/ml_0/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/posts/ml_0/</guid>
+      <description>1. 머신러닝의 종류 1.1 지도 학습 1.2 비지도 학습 1.3 준지도 학습 1.4 강화 학습 1.5 배치 학습 1.6 온라인 학습 1.7 사례 기반 학습 1.8 모델 기반 학습 2. 머신러닝의 주요 도전 과제 2.1 충분하지 않은 양의 훈련 데이터 2.2 대표성 없는 훈련 데이터 2.3 낮은 품질의 데이터 2.4 관련 없는 특성 2.5 훈련 데이터 과적합 2.6 훈련 데이터 과소적합 3. 테스트와 검증 3.1 하이퍼파라미터 튜닝과 모델 선택 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WooHyeok-Moon.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/about/</guid>
+      <description>About me 전북대학교에서 통계학 전공, 컴퓨터 공학 부전공으로 학사 과정 중에 있습니다. 데이터 마이닝, 데이터 시각화, 머신러닝, 딥러닝, 특히 이미지 세그멘테이션에 관심이 많습니다. 저와 평생을 함께 할 도메인 분야를 찾고 있습니다.
+Awards 한국지능정보사회진흥원(NIA) - 데이터 크리에이터 캠프 해커톤 최우수상 (2021. 09. 04 ~ 2021. 11. 20.)
+전북대학교 - 데이터분석 경진대회 최우수상 (2022 01/17 ~ 01/20)
+교육부 - Wemeet 프로젝트 팀 단위 교육부장관상, 개인 단위 최우수상 (2022. 05. 26 ~ 2023. 02.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://WooHyeok-Moon.github.io/posts/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/posts/test/</guid>
+      <description>test kr</description>
+    </item>
+    
+  </channel>
+</rss>
