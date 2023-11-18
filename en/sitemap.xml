@@ -62,6 +62,18 @@
                 href="https://WooHyeok-Moon.github.io/en/posts/"
                 />
   </url><url>
+    <loc>https://WooHyeok-Moon.github.io/en/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://WooHyeok-Moon.github.io/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://WooHyeok-Moon.github.io/en/search/"
+                />
+  </url><url>
     <loc>https://WooHyeok-Moon.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"

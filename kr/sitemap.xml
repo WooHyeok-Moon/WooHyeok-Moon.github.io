@@ -86,5 +86,17 @@
                 hreflang="kr"
                 href="https://WooHyeok-Moon.github.io/posts/test/"
                 />
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://WooHyeok-Moon.github.io/en/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://WooHyeok-Moon.github.io/search/"
+                />
   </url>
 </urlset>
