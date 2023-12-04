@@ -14,10 +14,10 @@
     <lastBuildDate>Tue, 11 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI대학원 면접 준비</title>
-      <link>https://WooHyeok-Moon.github.io/posts/ml_ex/</link>
+      <link>https://WooHyeok-Moon.github.io/posts/ai_0/</link>
       <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://WooHyeok-Moon.github.io/posts/ml_ex/</guid>
+      <guid>https://WooHyeok-Moon.github.io/posts/ai_0/</guid>
       <description>1. L1, L2 Regulerization 과제: 과적합을 감소시켜야 한다.
 해결 방법: 규제(Regulerization)
 과적합을 감소시키기 위해서 규제라는 개념을 도입하게 되는데, 이렇게 규제가 적용된 regression에는 Ridge와 Lasso가 있다.

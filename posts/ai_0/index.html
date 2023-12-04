@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="kr" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>AI대학원 면접 준비 | Axiomize</title>
+<meta name="keywords" content="Machine Learning, Deep Learning">
+<meta name="description" content="1. L1, L2 Regulerization 과제: 과적합을 감소시켜야 한다.
+해결 방법: 규제(Regulerization)
+과적합을 감소시키기 위해서 규제라는 개념을 도입하게 되는데, 이렇게 규제가 적용된 regression에는 Ridge와 Lasso가 있다.
+Ridge는 L2, Lasso는 L1 norm이 규제로써 작동되는 regression으로, L1 norm은 manhattan distance이고, L2 norm은 euclidean distance의 개념이다.
+L1 norm은 특정 feature을 없앨 수 있어 feature selection에 유리하다.
+L2 norm은 제곱 연산이 들어있어 이상치에 민감하다.
+L1 norm은 절댓값이 취해져 있어 0에서 미분불가능하다
+Gradient Descent 손실함수의 비용이 최소가 되는 지점을 찾을 때까지 기울기가 낮은 쪽으로 계속 이동시키는 과정을 반복한다.">
+<meta name="author" content="Woohyeok Moon">
+<link rel="canonical" href="https://WooHyeok-Moon.github.io/posts/ai_0/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://WooHyeok-Moon.github.io/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://WooHyeok-Moon.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://WooHyeok-Moon.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://WooHyeok-Moon.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://WooHyeok-Moon.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="kr" href="https://WooHyeok-Moon.github.io/posts/ai_0/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+        {left: "\\begin{align}", right: "\\end{align}", display: true},
+        {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+        {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+        {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+        {left: "\\[", right: "\\]", display: true}
+        ]
+    });
+});
+</script>
+<meta property="og:title" content="AI대학원 면접 준비" />
+<meta property="og:description" content="1. L1, L2 Regulerization 과제: 과적합을 감소시켜야 한다.
+해결 방법: 규제(Regulerization)
+과적합을 감소시키기 위해서 규제라는 개념을 도입하게 되는데, 이렇게 규제가 적용된 regression에는 Ridge와 Lasso가 있다.
+Ridge는 L2, Lasso는 L1 norm이 규제로써 작동되는 regression으로, L1 norm은 manhattan distance이고, L2 norm은 euclidean distance의 개념이다.
+L1 norm은 특정 feature을 없앨 수 있어 feature selection에 유리하다.
+L2 norm은 제곱 연산이 들어있어 이상치에 민감하다.
+L1 norm은 절댓값이 취해져 있어 0에서 미분불가능하다
+Gradient Descent 손실함수의 비용이 최소가 되는 지점을 찾을 때까지 기울기가 낮은 쪽으로 계속 이동시키는 과정을 반복한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WooHyeok-Moon.github.io/posts/ai_0/" /><meta property="og:image" content="https://WooHyeok-Moon.github.io/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-11T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://WooHyeok-Moon.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="AI대학원 면접 준비"/>
+<meta name="twitter:description" content="1. L1, L2 Regulerization 과제: 과적합을 감소시켜야 한다.
+해결 방법: 규제(Regulerization)
+과적합을 감소시키기 위해서 규제라는 개념을 도입하게 되는데, 이렇게 규제가 적용된 regression에는 Ridge와 Lasso가 있다.
+Ridge는 L2, Lasso는 L1 norm이 규제로써 작동되는 regression으로, L1 norm은 manhattan distance이고, L2 norm은 euclidean distance의 개념이다.
+L1 norm은 특정 feature을 없앨 수 있어 feature selection에 유리하다.
+L2 norm은 제곱 연산이 들어있어 이상치에 민감하다.
+L1 norm은 절댓값이 취해져 있어 0에서 미분불가능하다
+Gradient Descent 손실함수의 비용이 최소가 되는 지점을 찾을 때까지 기울기가 낮은 쪽으로 계속 이동시키는 과정을 반복한다."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://WooHyeok-Moon.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "AI대학원 면접 준비",
+      "item": "https://WooHyeok-Moon.github.io/posts/ai_0/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI대학원 면접 준비",
+  "name": "AI대학원 면접 준비",
+  "description": "1. L1, L2 Regulerization 과제: 과적합을 감소시켜야 한다.\n해결 방법: 규제(Regulerization)\n과적합을 감소시키기 위해서 규제라는 개념을 도입하게 되는데, 이렇게 규제가 적용된 regression에는 Ridge와 Lasso가 있다.\nRidge는 L2, Lasso는 L1 norm이 규제로써 작동되는 regression으로, L1 norm은 manhattan distance이고, L2 norm은 euclidean distance의 개념이다.\nL1 norm은 특정 feature을 없앨 수 있어 feature selection에 유리하다.\nL2 norm은 제곱 연산이 들어있어 이상치에 민감하다.\nL1 norm은 절댓값이 취해져 있어 0에서 미분불가능하다\nGradient Descent 손실함수의 비용이 최소가 되는 지점을 찾을 때까지 기울기가 낮은 쪽으로 계속 이동시키는 과정을 반복한다.",
+  "keywords": [
+    "Machine Learning", "Deep Learning"
+  ],
+  "articleBody": "1. L1, L2 Regulerization 과제: 과적합을 감소시켜야 한다.\n해결 방법: 규제(Regulerization)\n과적합을 감소시키기 위해서 규제라는 개념을 도입하게 되는데, 이렇게 규제가 적용된 regression에는 Ridge와 Lasso가 있다.\nRidge는 L2, Lasso는 L1 norm이 규제로써 작동되는 regression으로, L1 norm은 manhattan distance이고, L2 norm은 euclidean distance의 개념이다.\nL1 norm은 특정 feature을 없앨 수 있어 feature selection에 유리하다.\nL2 norm은 제곱 연산이 들어있어 이상치에 민감하다.\nL1 norm은 절댓값이 취해져 있어 0에서 미분불가능하다\nGradient Descent 손실함수의 비용이 최소가 되는 지점을 찾을 때까지 기울기가 낮은 쪽으로 계속 이동시키는 과정을 반복한다.\n이때 x축은 weight, y축은 cost이다. cost가 최소가 되도록 weight값을 갱신하는 과정을 반복\n초기 형태인 Batch Gradient Descent는 한 번에 모든 데이터를 업데이트하기 때문에 대용량 데이터를 처리하기에 적합하지 않다.\nSthochastic Gradient Descent 그리하여 데이터셋을 batch 단위로 쪼개 학습하는 방법을 적용하게 된다. Batch Normalization internal covariate shift를 줄이기 위한 기법\ncovariate shift란 train set의 분포와 test set의 분포가 달라 제대로 예측하지 못하는 현상을 말함\ninternal covariate shift는 이러한 현상이 neural network 내부에서 일어나는 것을 말하는데, hidden layer에 입력으로 들어오는 데이터의 분포가 달라지는 것을 의미하며, layer가 깊을수록 심화될 수 있다.\n또한 이는 mini batch 기법에서는 batch마다 분포가 달라져 특히 성능에 critical한 문제가 될 수 있다.\n이 분포를 단순히 whitening하게 되면 편향이 사라지게 되어 유의미한 정보가 유실될 수 있다.\nbatch마다 평균과 분산을 계산하여 표준화하되 scale factor($\\gamma$)와 shift factor($\\beta$)를 적용시킨다.\n학습 시 batch normalization은 activation function으로 들어가기 전에 수행되는데, scale factor와 shift factor가 들어옴으로써 relu를 사용할 때 음수에 해당하는 부분이 모두 0으로 사라져버리는 것을 방지할 수 있고, sigmoid activation function을 사용할 때 비선형성이 사라지는 현상 또한 방지할 수 있고, normalization하기 전인 원래 형태에 대해서도 학습을 진행할 수 있어 backpropagation 또한 적용할 수 있다.\n추론 시 batch normalization은 테스트 데이터 하나에 대해 답을 내야 하므로 평균과 분산을 낼 수 없으므로 training 시 mini-batch들의 평균과 분산을 대신 사용한다.\nCNN(Convolution Neural Network) 기존의 DNN은 1차원 형태의 데이터를 사용하므로 2차원 형태의 이미지가 입력값으로 들어왔을 때에는 1차원으로 Flatten시켜줘야 한다. 이 과정에서 정보 손실이 일어난다. 또한 추상화 과정 없이 바로 연산을 진행하는데, 이로 인해 효율성이 저하된다.\nCNN은 이미지를 이미지 그대로 받아 공간적/지역적 정보를 유지할 수 있다.\n이미지는 이미지 전체보다는 특징적인 부분과 그 주변 픽셀들의 연관성에 집중해야 한다. CNN은 이를 위해 Convolution 연산을 사용한다.\n하나의 Convolution layer에는 Convolution과 Activation이 포함되어 있다. Activation Function으로는 RELU를 사용한다.\n이후 생성된 여러 개의 결과값에 Max Pooling을 적용하여 크기를 줄여준다.\n다시 Convolution, Activation, Pooling을 진행한다.\n나온 Feature data들을 Flatten하여 1차원 형태의 데이터로 만든다.\nFC(Fully connected) layer를 통과시켜 Softmax를 적용해주면 최종 output이 나온다.\nActivation Function 활성화 함수는 선형 분류기를 비선형 분류기로 만들어주는 역할을 한다.\n선형 함수를 사용하면 층을 깊게 쌓는 의미가 없다.\n활성화 함수 없이 feedforwarding을 진행하게 된다면 아래와 같이 진행된다. $$ \\begin{align} f(x) \u0026= w \\times x\\\\ f(f(x)) \u0026= w \\times w \\times x \u0026= w^2x\\\\ f(f(f(x))) \u0026= w \\times w \\times w \\times x \u0026= w^3x\\\\ \u0026\\dots \\end{align} $$\n이는 $y = ax$인 선형 함수에서 $a = w^3$인 선형 함수가 되었을 뿐이며 이는 weight가 $w^3$인 한 개 층으로도 네트워크를 구성할 수 있음을 의미한다. -\u003e Deep Network의 의미가 없다.\n",
+  "wordCount" : "474",
+  "inLanguage": "kr",
+  "datePublished": "2023-07-11T00:00:00Z",
+  "dateModified": "2023-07-11T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Woohyeok Moon"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://WooHyeok-Moon.github.io/posts/ai_0/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Axiomize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://WooHyeok-Moon.github.io/img/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://WooHyeok-Moon.github.io/" accesskey="h" title="Axiomize (Alt + H)">
+                    <img src="https://WooHyeok-Moon.github.io/img/logo_hu203c9d87d740bff47b63115688d6fb40_16148_0x120_resize_box_3.png" alt="" aria-label="logo"
+                        style="margin-top: 9px;"
+                        height="45">
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://WooHyeok-Moon.github.io/en/" title="EN"
+                            aria-label="EN">EN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/about/" title="소개">
+                    <span>소개</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/search/" title="검색">
+                    <span>검색</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/categories/" title="카테고리">
+                    <span>카테고리</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/tags/" title="태그">
+                    <span>태그</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://WooHyeok-Moon.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://WooHyeok-Moon.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      AI대학원 면접 준비
+    </h1>
+    <div class="post-meta"><span title='2023-07-11 00:00:00 +0000 UTC'>July 11, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Woohyeok Moon
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="1-l1-l2-regulerization">1. L1, L2 Regulerization<a hidden class="anchor" aria-hidden="true" href="#1-l1-l2-regulerization">#</a></h2>
+<ul>
+<li>
+<p>과제: 과적합을 감소시켜야 한다.</p>
+</li>
+<li>
+<p>해결 방법: 규제(Regulerization)</p>
+</li>
+<li>
+<p>과적합을 감소시키기 위해서 규제라는 개념을 도입하게 되는데, 이렇게 규제가 적용된 regression에는 Ridge와 Lasso가 있다.</p>
+</li>
+<li>
+<p>Ridge는 L2, Lasso는 L1 norm이 규제로써 작동되는 regression으로, L1 norm은 manhattan distance이고, L2 norm은 euclidean distance의 개념이다.</p>
+</li>
+<li>
+<p>L1 norm은 특정 feature을 없앨 수 있어 feature selection에 유리하다.</p>
+</li>
+<li>
+<p>L2 norm은 제곱 연산이 들어있어 이상치에 민감하다.</p>
+</li>
+<li>
+<p>L1 norm은 절댓값이 취해져 있어 0에서 미분불가능하다</p>
+</li>
+</ul>
+<h2 id="gradient-descent">Gradient Descent<a hidden class="anchor" aria-hidden="true" href="#gradient-descent">#</a></h2>
+<ul>
+<li>
+<p>손실함수의 비용이 최소가 되는 지점을 찾을 때까지 기울기가 낮은 쪽으로 계속 이동시키는 과정을 반복한다.</p>
+</li>
+<li>
+<p>이때 x축은 weight, y축은 cost이다. cost가 최소가 되도록 weight값을 갱신하는 과정을 반복</p>
+</li>
+<li>
+<p>초기 형태인 Batch Gradient Descent는 한 번에 모든 데이터를 업데이트하기 때문에 대용량 데이터를 처리하기에 적합하지 않다.</p>
+</li>
+</ul>
+<h2 id="sthochastic-gradient-descent">Sthochastic Gradient Descent<a hidden class="anchor" aria-hidden="true" href="#sthochastic-gradient-descent">#</a></h2>
+<ul>
+<li>그리하여 데이터셋을 batch 단위로 쪼개 학습하는 방법을 적용하게 된다.</li>
+</ul>
+<h2 id="batch-normalization">Batch Normalization<a hidden class="anchor" aria-hidden="true" href="#batch-normalization">#</a></h2>
+<ul>
+<li>
+<p>internal covariate shift를 줄이기 위한 기법</p>
+</li>
+<li>
+<p>covariate shift란 train set의 분포와 test set의 분포가 달라 제대로 예측하지 못하는 현상을 말함</p>
+</li>
+<li>
+<p>internal covariate shift는 이러한 현상이 neural network 내부에서 일어나는 것을 말하는데, hidden layer에 입력으로 들어오는 데이터의 분포가 달라지는 것을 의미하며, layer가 깊을수록 심화될 수 있다.</p>
+</li>
+<li>
+<p>또한 이는 mini batch 기법에서는 batch마다 분포가 달라져 특히 성능에 critical한 문제가 될 수 있다.</p>
+</li>
+<li>
+<p>이 분포를 단순히 whitening하게 되면 편향이 사라지게 되어 유의미한 정보가 유실될 수 있다.</p>
+</li>
+<li>
+<p>batch마다 평균과 분산을 계산하여 표준화하되 scale factor($\gamma$)와 shift factor($\beta$)를 적용시킨다.</p>
+</li>
+<li>
+<p>학습 시 batch normalization은 activation function으로 들어가기 전에 수행되는데, scale factor와 shift factor가 들어옴으로써 relu를 사용할 때 음수에 해당하는 부분이 모두 0으로 사라져버리는 것을 방지할 수 있고, sigmoid activation function을 사용할 때 비선형성이 사라지는 현상 또한 방지할 수 있고, normalization하기 전인 원래 형태에 대해서도 학습을 진행할 수 있어 backpropagation 또한 적용할 수 있다.</p>
+</li>
+<li>
+<p>추론 시 batch normalization은 테스트 데이터 하나에 대해 답을 내야 하므로 평균과 분산을 낼 수 없으므로 training 시 mini-batch들의 평균과 분산을 대신 사용한다.</p>
+</li>
+</ul>
+<h2 id="cnnconvolution-neural-network">CNN(Convolution Neural Network)<a hidden class="anchor" aria-hidden="true" href="#cnnconvolution-neural-network">#</a></h2>
+<ul>
+<li>
+<p>기존의 DNN은 1차원 형태의 데이터를 사용하므로 2차원 형태의 이미지가 입력값으로 들어왔을 때에는 1차원으로 Flatten시켜줘야 한다. 이 과정에서 정보 손실이 일어난다. 또한 추상화 과정 없이 바로 연산을 진행하는데, 이로 인해 효율성이 저하된다.</p>
+</li>
+<li>
+<p>CNN은 이미지를 이미지 그대로 받아 공간적/지역적 정보를 유지할 수 있다.</p>
+</li>
+<li>
+<p>이미지는 이미지 전체보다는 특징적인 부분과 그 주변 픽셀들의 연관성에 집중해야 한다. CNN은 이를 위해 Convolution 연산을 사용한다.</p>
+</li>
+<li>
+<p>하나의 Convolution layer에는 Convolution과 Activation이 포함되어 있다. Activation Function으로는 RELU를 사용한다.</p>
+</li>
+<li>
+<p>이후 생성된 여러 개의 결과값에 Max Pooling을 적용하여 크기를 줄여준다.</p>
+</li>
+<li>
+<p>다시 Convolution, Activation, Pooling을 진행한다.</p>
+</li>
+<li>
+<p>나온 Feature data들을 Flatten하여 1차원 형태의 데이터로 만든다.</p>
+</li>
+<li>
+<p>FC(Fully connected) layer를 통과시켜 Softmax를 적용해주면 최종 output이 나온다.</p>
+</li>
+</ul>
+<h2 id="activation-function">Activation Function<a hidden class="anchor" aria-hidden="true" href="#activation-function">#</a></h2>
+<ul>
+<li>
+<p>활성화 함수는 선형 분류기를 비선형 분류기로 만들어주는 역할을 한다.</p>
+</li>
+<li>
+<p>선형 함수를 사용하면 층을 깊게 쌓는 의미가 없다.</p>
+</li>
+<li>
+<p>활성화 함수 없이 feedforwarding을 진행하게 된다면 아래와 같이 진행된다.
+$$
+\begin{align}
+f(x) &amp;= w \times x\\
+f(f(x)) &amp;= w \times w \times x &amp;= w^2x\\
+f(f(f(x))) &amp;= w \times w \times w \times x &amp;= w^3x\\
+&amp;\dots
+\end{align}
+$$</p>
+</li>
+<li>
+<p>이는 $y = ax$인 선형 함수에서 $a = w^3$인 선형 함수가 되었을 뿐이며 이는 weight가 $w^3$인 한 개 층으로도 네트워크를 구성할 수 있음을 의미한다. -&gt; Deep Network의 의미가 없다.</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://WooHyeok-Moon.github.io/tags/machine-learning/">Machine Learning</a></li>
+      <li><a href="https://WooHyeok-Moon.github.io/tags/deep-learning/">Deep Learning</a></li>
+    </ul>
+    
+  </footer>
+  <div class="container_disqus" style="margin: 30px 0px 0px 0px;">
+      <script src="https://giscus.app/client.js"
+          data-repo=WooHyeok-Moon/blog-comments
+          data-repo-id=R_kgDOJrdphg
+          data-category=Comments
+          data-category-id=DIC_kwDOJrdphs4CXA2h
+          data-mapping=pathname
+          data-reactions-enabled=1
+          data-emit-metadata=0
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="ko"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+      </script>
+  </div>
+  <script async>
+      document.querySelector("div.container_disqus > script").setAttribute('data-theme', localStorage.getItem('pref-theme') ? localStorage.getItem('pref-theme') : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
+  
+      document.querySelector('#theme-toggle').addEventListener('click', () => {
+          let g = document.querySelector('iframe.giscus-frame')
+          if (g) {
+              g.contentWindow.postMessage({
+                  giscus: {
+                      setConfig: {
+                          theme: localStorage.getItem('pref-theme') ? ((localStorage.getItem('pref-theme') === 'dark') ? 'light': 'dark') : (document.body.className.includes("dark") ? 'light' : 'dark')
+                      }
+                  }
+              }, 'https://giscus.app');
+          }
+      })
+  </script>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://WooHyeok-Moon.github.io/">Axiomize</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
