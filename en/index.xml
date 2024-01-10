@@ -10,7 +10,20 @@
       <link>https://WooHyeok-Moon.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://WooHyeok-Moon.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://WooHyeok-Moon.github.io/en/posts/st1/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/en/posts/st1/</guid>
+      <description>Introduction The amount of information and data that are becoming available to us is growing exponentially. As the amount of available data grows, so is our need to understand it.
+If you torture the data long enough. it will confess to anything.
+- Ronald Coase
+Why statistical literacy is essential in data sceince Statistics provides the skills to access whether the data are sufficient to answer the questions at hand</description>
+    </item>
+    
     <item>
       <title></title>
       <link>https://WooHyeok-Moon.github.io/en/about/</link>
