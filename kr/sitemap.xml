@@ -2,17 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://WooHyeok-Moon.github.io/posts/sm1/</loc>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://WooHyeok-Moon.github.io/posts/ai_0/</loc>
     <lastmod>2023-07-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://WooHyeok-Moon.github.io/posts/ml_0/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://WooHyeok-Moon.github.io/categories/artificial-intelligence/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://WooHyeok-Moon.github.io/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -25,7 +22,7 @@
                 />
   </url><url>
     <loc>https://WooHyeok-Moon.github.io/categories/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -37,14 +34,8 @@
                 href="https://WooHyeok-Moon.github.io/categories/"
                 />
   </url><url>
-    <loc>https://WooHyeok-Moon.github.io/tags/deep-learning/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://WooHyeok-Moon.github.io/tags/machine-learning/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://WooHyeok-Moon.github.io/posts/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -57,7 +48,7 @@
                 />
   </url><url>
     <loc>https://WooHyeok-Moon.github.io/tags/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -68,6 +59,33 @@
                 hreflang="kr"
                 href="https://WooHyeok-Moon.github.io/tags/"
                 />
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/tags/%EB%93%9C-%EB%AA%A8%EB%A5%B4%EA%B0%84-%EB%B2%95%EC%B9%99/</loc>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/tags/%EB%B2%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/</loc>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/categories/%EC%88%98%EB%A6%AC%ED%86%B5%EA%B3%84%ED%95%99/</loc>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/tags/%ED%91%9C%EB%B3%B8%EA%B3%B5%EA%B0%84/</loc>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/categories/artificial-intelligence/</loc>
+    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/tags/deep-learning/</loc>
+    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/tags/linear-algebra/</loc>
+    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/tags/machine-learning/</loc>
+    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/tags/statistics/</loc>
+    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://WooHyeok-Moon.github.io/about/</loc>
     <xhtml:link

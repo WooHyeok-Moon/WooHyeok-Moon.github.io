@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>벤 다이어그램 on Axiomize</title>
+    <link>https://WooHyeok-Moon.github.io/tags/%EB%B2%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/</link>
+    <description>Recent content in 벤 다이어그램 on Axiomize</description>
+    <image>
+      <title>Axiomize</title>
+      <url>https://WooHyeok-Moon.github.io/papermod-cover.png</url>
+      <link>https://WooHyeok-Moon.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr</language>
+    <lastBuildDate>Tue, 06 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/tags/%EB%B2%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>표본공간과 사건</title>
+      <link>https://WooHyeok-Moon.github.io/posts/sm1/</link>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/posts/sm1/</guid>
+      <description>키워드 실험: 어떤 현상의 관찰결과를 얻기 위한 과정 표본공간($S$): 모든 관찰 가능한 결과의 집합 사건: 표본공간의 부분집합 정의 1 사건 $A$와 $B$가 표본공간 $S$상에 정의되었다고 하자.
+사건 $A$와 $B$가 동시에 속하는 사건을 $A$와 $B$의 공통부분이라고 하고 $A \cap B$라고 표기한다. 사건 $A$ 또는 $B$에 속하는 사건을 $A$와 $B$의 합이라고 하고 $A \cup B$로 표기한다. 예 1.1 동전을 3회 던지는 실험에서 앞면을 $H$, 뒷면을 $T$로 표시하면 표본공간은 $$ S = {\ HHH,\ HHT,\ HTH,\ THH,\ HTT,\ THT,\ TTH,\ TTT\ } $$ 이고, &amp;lsquo;2회 앞면이 나오는 사건&amp;rsquo;은 $$ A = {\ HHT,\ HTH,\ THH\ } $$ 이다.</description>
+    </item>
+    
+  </channel>
+</rss>

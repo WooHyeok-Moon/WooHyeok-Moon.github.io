@@ -11,30 +11,30 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr</language>
-    <lastBuildDate>Tue, 11 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>표본공간과 사건</title>
+      <link>https://WooHyeok-Moon.github.io/posts/sm1/</link>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/posts/sm1/</guid>
+      <description>키워드 실험: 어떤 현상의 관찰결과를 얻기 위한 과정 표본공간($S$): 모든 관찰 가능한 결과의 집합 사건: 표본공간의 부분집합 정의 1 사건 $A$와 $B$가 표본공간 $S$상에 정의되었다고 하자.
+사건 $A$와 $B$가 동시에 속하는 사건을 $A$와 $B$의 공통부분이라고 하고 $A \cap B$라고 표기한다. 사건 $A$ 또는 $B$에 속하는 사건을 $A$와 $B$의 합이라고 하고 $A \cup B$로 표기한다. 예 1.1 동전을 3회 던지는 실험에서 앞면을 $H$, 뒷면을 $T$로 표시하면 표본공간은 $$ S = {\ HHH,\ HHT,\ HTH,\ THH,\ HTT,\ THT,\ TTH,\ TTT\ } $$ 이고, &amp;lsquo;2회 앞면이 나오는 사건&amp;rsquo;은 $$ A = {\ HHT,\ HTH,\ THH\ } $$ 이다.</description>
+    </item>
+    
     <item>
       <title>AI대학원 면접 준비</title>
       <link>https://WooHyeok-Moon.github.io/posts/ai_0/</link>
       <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://WooHyeok-Moon.github.io/posts/ai_0/</guid>
-      <description>1. L1, L2 Regulerization 과제: 과적합을 감소시켜야 한다.
+      <description>Statistics 1. Central Limit Theorem 표본의 개수 $n$이 충분히 클 때 표본 분포가 정규분포 $N(\mu, \sigma^2)$에 근사하는 것
+$E(\bar{x}) \rightarrow \mu$
+Deep $\cdot$ Machine Learning 1. L1, L2 Regulerization 과제: 과적합을 감소시켜야 한다.
 해결 방법: 규제(Regulerization)
 과적합을 감소시키기 위해서 규제라는 개념을 도입하게 되는데, 이렇게 규제가 적용된 regression에는 Ridge와 Lasso가 있다.
 Ridge는 L2, Lasso는 L1 norm이 규제로써 작동되는 regression으로, L1 norm은 manhattan distance이고, L2 norm은 euclidean distance의 개념이다.
-L1 norm은 특정 feature을 없앨 수 있어 feature selection에 유리하다.
-L2 norm은 제곱 연산이 들어있어 이상치에 민감하다.
-L1 norm은 절댓값이 취해져 있어 0에서 미분불가능하다
-Gradient Descent 손실함수의 비용이 최소가 되는 지점을 찾을 때까지 기울기가 낮은 쪽으로 계속 이동시키는 과정을 반복한다.</description>
-    </item>
-    
-    <item>
-      <title>머신러닝 목차</title>
-      <link>https://WooHyeok-Moon.github.io/posts/ml_0/</link>
-      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://WooHyeok-Moon.github.io/posts/ml_0/</guid>
-      <description>1. 머신러닝의 종류 1.1 지도 학습 1.2 비지도 학습 1.3 준지도 학습 1.4 강화 학습 1.5 배치 학습 1.6 온라인 학습 1.7 사례 기반 학습 1.8 모델 기반 학습 2. 머신러닝의 주요 도전 과제 2.1 충분하지 않은 양의 훈련 데이터 2.2 대표성 없는 훈련 데이터 2.3 낮은 품질의 데이터 2.4 관련 없는 특성 2.5 훈련 데이터 과적합 2.6 훈련 데이터 과소적합 3. 테스트와 검증 3.1 하이퍼파라미터 튜닝과 모델 선택 </description>
+L1 norm은 특정 feature을 없앨 수 있어 feature selection에 유리하다.</description>
     </item>
     
     <item>
