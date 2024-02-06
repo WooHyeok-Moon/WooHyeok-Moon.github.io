@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="kr" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>확률의 정의 | Axiomize</title>
+<meta name="keywords" content="확률">
+<meta name="description" content="러시아의 수학자 콜모고로프(Andrei Kolmogorov, 1903~1987)는 확률을 공리적으로 정의하고자 하였으며 다음과 같은 공리가 확률을 정의하는 필요충분조건이 됨을 보였다.
+확률의 공리 (1) 임의의 사건 $A$에 대하여 $P(A) \ge 0$이다.
+(2) $P(S) = 1$이다.
+(3) 표본공간 $S$에 정의된 사건열 $A_1, A_2, \cdots$ 가 있다고 하자. 이제 모든 $i \ne j$에 대하여 $A_i \cap A_j = \varnothing$ 이면 $P(\displaystyle\bigcup_{i=1}^{\infty}A_i = \displaystyle\sum_{i=1}^{\infty}P(A_i)$이다.
+정리 1.1 두 개의 사건 $A$와 $B$에 대하여 다음과 같은 성질들이 성립한다.
+$P(A^c) = 1 - P(A)$ $P(\varnothing) = 0$ $A \subset B$이면 $P(A) \le P(B)$이다.">
+<meta name="author" content="Woohyeok Moon">
+<link rel="canonical" href="https://WooHyeok-Moon.github.io/posts/sm2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://WooHyeok-Moon.github.io/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://WooHyeok-Moon.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://WooHyeok-Moon.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://WooHyeok-Moon.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://WooHyeok-Moon.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="kr" href="https://WooHyeok-Moon.github.io/posts/sm2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+        {left: "\\begin{align}", right: "\\end{align}", display: true},
+        {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+        {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+        {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+        {left: "\\[", right: "\\]", display: true}
+        ]
+    });
+});
+</script>
+<meta property="og:title" content="확률의 정의" />
+<meta property="og:description" content="러시아의 수학자 콜모고로프(Andrei Kolmogorov, 1903~1987)는 확률을 공리적으로 정의하고자 하였으며 다음과 같은 공리가 확률을 정의하는 필요충분조건이 됨을 보였다.
+확률의 공리 (1) 임의의 사건 $A$에 대하여 $P(A) \ge 0$이다.
+(2) $P(S) = 1$이다.
+(3) 표본공간 $S$에 정의된 사건열 $A_1, A_2, \cdots$ 가 있다고 하자. 이제 모든 $i \ne j$에 대하여 $A_i \cap A_j = \varnothing$ 이면 $P(\displaystyle\bigcup_{i=1}^{\infty}A_i = \displaystyle\sum_{i=1}^{\infty}P(A_i)$이다.
+정리 1.1 두 개의 사건 $A$와 $B$에 대하여 다음과 같은 성질들이 성립한다.
+$P(A^c) = 1 - P(A)$ $P(\varnothing) = 0$ $A \subset B$이면 $P(A) \le P(B)$이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://WooHyeok-Moon.github.io/posts/sm2/" /><meta property="og:image" content="https://WooHyeok-Moon.github.io/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-02-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-02-06T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://WooHyeok-Moon.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="확률의 정의"/>
+<meta name="twitter:description" content="러시아의 수학자 콜모고로프(Andrei Kolmogorov, 1903~1987)는 확률을 공리적으로 정의하고자 하였으며 다음과 같은 공리가 확률을 정의하는 필요충분조건이 됨을 보였다.
+확률의 공리 (1) 임의의 사건 $A$에 대하여 $P(A) \ge 0$이다.
+(2) $P(S) = 1$이다.
+(3) 표본공간 $S$에 정의된 사건열 $A_1, A_2, \cdots$ 가 있다고 하자. 이제 모든 $i \ne j$에 대하여 $A_i \cap A_j = \varnothing$ 이면 $P(\displaystyle\bigcup_{i=1}^{\infty}A_i = \displaystyle\sum_{i=1}^{\infty}P(A_i)$이다.
+정리 1.1 두 개의 사건 $A$와 $B$에 대하여 다음과 같은 성질들이 성립한다.
+$P(A^c) = 1 - P(A)$ $P(\varnothing) = 0$ $A \subset B$이면 $P(A) \le P(B)$이다."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://WooHyeok-Moon.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "확률의 정의",
+      "item": "https://WooHyeok-Moon.github.io/posts/sm2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "확률의 정의",
+  "name": "확률의 정의",
+  "description": "러시아의 수학자 콜모고로프(Andrei Kolmogorov, 1903~1987)는 확률을 공리적으로 정의하고자 하였으며 다음과 같은 공리가 확률을 정의하는 필요충분조건이 됨을 보였다.\n확률의 공리 (1) 임의의 사건 $A$에 대하여 $P(A) \\ge 0$이다.\n(2) $P(S) = 1$이다.\n(3) 표본공간 $S$에 정의된 사건열 $A_1, A_2, \\cdots$ 가 있다고 하자. 이제 모든 $i \\ne j$에 대하여 $A_i \\cap A_j = \\varnothing$ 이면 $P(\\displaystyle\\bigcup_{i=1}^{\\infty}A_i = \\displaystyle\\sum_{i=1}^{\\infty}P(A_i)$이다.\n정리 1.1 두 개의 사건 $A$와 $B$에 대하여 다음과 같은 성질들이 성립한다.\n$P(A^c) = 1 - P(A)$ $P(\\varnothing) = 0$ $A \\subset B$이면 $P(A) \\le P(B)$이다.",
+  "keywords": [
+    "확률"
+  ],
+  "articleBody": "러시아의 수학자 콜모고로프(Andrei Kolmogorov, 1903~1987)는 확률을 공리적으로 정의하고자 하였으며 다음과 같은 공리가 확률을 정의하는 필요충분조건이 됨을 보였다.\n확률의 공리 (1) 임의의 사건 $A$에 대하여 $P(A) \\ge 0$이다.\n(2) $P(S) = 1$이다.\n(3) 표본공간 $S$에 정의된 사건열 $A_1, A_2, \\cdots$ 가 있다고 하자. 이제 모든 $i \\ne j$에 대하여 $A_i \\cap A_j = \\varnothing$ 이면 $P(\\displaystyle\\bigcup_{i=1}^{\\infty}A_i = \\displaystyle\\sum_{i=1}^{\\infty}P(A_i)$이다.\n정리 1.1 두 개의 사건 $A$와 $B$에 대하여 다음과 같은 성질들이 성립한다.\n$P(A^c) = 1 - P(A)$ $P(\\varnothing) = 0$ $A \\subset B$이면 $P(A) \\le P(B)$이다. $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ 증명 $1 = P(S) = P(A \\cup A^c) = P(A) + P(A_c) (\\because$ 공리 (3)) $0 = 1 - P(S) = P(S^c) = P(\\varnothing) (\\because$ 공리 (2)와 (1)) $B = A \\cup (B \\cap A^c)$로 나타낼 수 있으며, $A \\cap (B \\cap A^c) = \\varnothing$이므로 공리 (1)과 (3)에 의해 $$ \\\\ P(B) = P(A) + P(B \\cap A^c) \\ge P(A) \\\\ $$ 가 성립한다. $P(A) = P(A \\cap B^c) + P(A \\cap B), \\quad P(B) = P(B \\cap A^c) + P(A \\cap B)$ 예 1.8 예 1.1의 실험에서 표본공간 $S$에 속한 8개의 점들이 모두 같은 확률 $\\frac{1}{8}$을 가졌다고 가정하고, 최소한 1개의 앞면이 나오는 사건을 $A$, 꼭 2개의 앞면이 나오는 사건을 $B$, 그리고 첫 번째 동전이 앞면이 나오는 사건을 $C$라고 하자. 그러면, $A$의 여사건은 $A^c = {TTT}$가 되며 $$ \\begin{align} P(A) = 1 - P(A^c) = 1 - \\frac{1}{8} = \\frac{7}{8} \\end{align} $$ 이 된다. 또 $$ \\begin{align} P(B \\cup C) = P({HHH, HHT, HTH, THH, HTT}) = \\frac{5}{8} \\end{align} $$ 인데, 이는 $$ \\begin{align} \\begin{split} P({HHT, HTH, THH}) \u0026+ P({HHH, HHT, HTH, HTT})\\\\ \u0026- P({HHT, HTH})\\\\ \u0026= \\frac{3}{8} + \\frac{4}{8} - \\frac{2}{8} = \\frac{5}{8} \\end{split} \\end{align} $$ 와 같이 구할 수도 있다.\n예 1.9 예 1.5의 실험에서 표본공간 $S = {1, 2, 3, 4, 5, 6}$에 속한 6개의 점들이 모두 같은 확률 $\\frac{1}{6}$을 가졌다고 가정하자. 사건 $A$와 $B$를 $$ A = {2, 4, 6} \\qquad B = {3, 6} $$ 으로 표현하면, $A \\cap B = {6}, A \\cup B = {2, 3, 4, 6}$이 된다. 여기에서 $$ \\begin{align} P(A \\cup B) \u0026= P(A) + P(B) - P(A \\cap B) \\\\ \u0026=\\frac{3}{6} + \\frac{2}{6} - \\frac{1}{6} \\\\ \u0026=\\frac{2}{3} \\end{align} $$ 와 같음을 알 수 있다.\n예 1.10 두 사건 $A$와 $B$가 표본공간 $S$에서 정의되어 있는데, 둘 중 적어도 한 사건이 일어날 확률이 0.3이고 $A$만 일어날 확률이 0.1이라고 하자. 이때 $P(A \\cup B) = P(B) + P(A \\cap B^c)$이므로 $P(B) = 0.3 - 0.1 = 0.2$가 된다.\n예 1.11 세 사건 $A, B, C$가 표본공간 $S$에서 정의되어 있을 때, 정리 1.1의 (4)에 의해 $$ \\begin{align} P(A \\cup B \\cup C) =\u0026 P((A \\cup B) \\cup C) \\\\ =\u0026 P(A \\cup B) + P(C) - P((A \\cup B) \\cap C) \\\\ =\u0026 P(A) + P(B) - P(A \\cap B) + P(C) \\\\ \u0026- P((A \\cap C) \\cup (B \\cap C)) \\\\ =\u0026 P(A) + P(B) + P(C) - P(A \\cap B) - P(A \\cap C) \\\\ \u0026- P(B \\cap C) + P(A \\cap B \\cap C) \\\\ \\end{align} $$ 이므로 다음이 성립한다. $$ P(A \\cup B \\cup C) = P(A) + P(B) + P(C) - P(A \\cap B) - P(B \\cap C) - P(A \\cap C) + P(A \\cap B \\cap C) $$\n",
+  "wordCount" : "535",
+  "inLanguage": "kr",
+  "datePublished": "2024-02-06T00:00:00Z",
+  "dateModified": "2024-02-06T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Woohyeok Moon"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://WooHyeok-Moon.github.io/posts/sm2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Axiomize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://WooHyeok-Moon.github.io/img/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://WooHyeok-Moon.github.io/" accesskey="h" title="Axiomize (Alt + H)">
+                    <img src="https://WooHyeok-Moon.github.io/img/logo_hu203c9d87d740bff47b63115688d6fb40_16148_0x120_resize_box_3.png" alt="" aria-label="logo"
+                        style="margin-top: 9px;"
+                        height="45">
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://WooHyeok-Moon.github.io/en/" title="EN"
+                            aria-label="EN">EN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/about/" title="소개">
+                    <span>소개</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/search/" title="검색">
+                    <span>검색</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/categories/" title="카테고리">
+                    <span>카테고리</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/tags/" title="태그">
+                    <span>태그</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://WooHyeok-Moon.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://WooHyeok-Moon.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      확률의 정의
+    </h1>
+    <div class="post-meta"><span title='2024-02-06 00:00:00 +0000 UTC'>February 6, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Woohyeok Moon
+
+</div>
+  </header> 
+  <div class="post-content"><p>러시아의 수학자 콜모고로프(Andrei Kolmogorov, 1903~1987)는 확률을 공리적으로 정의하고자 하였으며 다음과 같은 공리가 확률을 정의하는 필요충분조건이 됨을 보였다.</p>
+<h3 id="확률의-공리">확률의 공리<a hidden class="anchor" aria-hidden="true" href="#확률의-공리">#</a></h3>
+<p>(1) 임의의 사건 $A$에 대하여 $P(A) \ge 0$이다.<br>
+(2) $P(S) = 1$이다.<br>
+(3) 표본공간 $S$에 정의된 사건열 $A_1, A_2, \cdots$ 가 있다고 하자. 이제 모든 $i \ne j$에 대하여 $A_i \cap A_j = \varnothing$ 이면 $P(\displaystyle\bigcup_{i=1}^{\infty}A_i = \displaystyle\sum_{i=1}^{\infty}P(A_i)$이다.</p>
+<h3 id="정리-11">정리 1.1<a hidden class="anchor" aria-hidden="true" href="#정리-11">#</a></h3>
+<p>두 개의 사건 $A$와 $B$에 대하여 다음과 같은 성질들이 성립한다.</p>
+<ol>
+<li>$P(A^c) = 1 - P(A)$</li>
+<li>$P(\varnothing) = 0$</li>
+<li>$A \subset B$이면 $P(A) \le P(B)$이다.</li>
+<li>$P(A \cup B) = P(A) + P(B) - P(A \cap B)$</li>
+</ol>
+<h3 id="증명">증명<a hidden class="anchor" aria-hidden="true" href="#증명">#</a></h3>
+<ol>
+<li>$1 = P(S) = P(A \cup A^c) = P(A) + P(A_c) (\because$ 공리 (3))</li>
+<li>$0 = 1 - P(S) = P(S^c) = P(\varnothing) (\because$ 공리 (2)와 (1))</li>
+<li>$B = A \cup (B \cap A^c)$로 나타낼 수 있으며, $A \cap (B \cap A^c) = \varnothing$이므로 공리 (1)과 (3)에 의해
+$$
+\\
+P(B) = P(A) + P(B \cap A^c) \ge P(A)
+\\
+$$
+가 성립한다.</li>
+<li>$P(A) = P(A \cap B^c) + P(A \cap B), \quad P(B) = P(B \cap A^c) + P(A \cap B)$</li>
+</ol>
+<h3 id="예-18"><code>예 1.8</code><a hidden class="anchor" aria-hidden="true" href="#예-18">#</a></h3>
+<p><a href="https://woohyeok-moon.github.io/posts/sm1/#%EC%98%88-11">예 1.1</a>의 실험에서 표본공간 $S$에 속한 8개의 점들이 모두 같은 확률 $\frac{1}{8}$을 가졌다고 가정하고, 최소한 1개의 앞면이 나오는 사건을 $A$, 꼭 2개의 앞면이 나오는 사건을 $B$, 그리고 첫 번째 동전이 앞면이 나오는 사건을 $C$라고 하자. 그러면, $A$의 여사건은 $A^c = {TTT}$가 되며
+$$
+\begin{align}
+P(A) = 1 - P(A^c) = 1 - \frac{1}{8} = \frac{7}{8}
+\end{align}
+$$
+이 된다. 또
+$$
+\begin{align}
+P(B \cup C) = P({HHH, HHT, HTH, THH, HTT}) = \frac{5}{8}
+\end{align}
+$$
+인데, 이는
+$$
+\begin{align}
+\begin{split}
+P({HHT, HTH, THH}) &amp;+ P({HHH, HHT, HTH, HTT})\\
+&amp;- P({HHT, HTH})\\
+&amp;= \frac{3}{8} + \frac{4}{8} - \frac{2}{8} = \frac{5}{8}
+\end{split}
+\end{align}
+$$
+와 같이 구할 수도 있다.</p>
+<h3 id="예-19"><code>예 1.9</code><a hidden class="anchor" aria-hidden="true" href="#예-19">#</a></h3>
+<p><a href="https://woohyeok-moon.github.io/posts/sm1/#%EC%98%88-15">예 1.5</a>의 실험에서 표본공간 $S = {1, 2, 3, 4, 5, 6}$에 속한 6개의 점들이 모두 같은 확률 $\frac{1}{6}$을 가졌다고 가정하자. 사건 $A$와 $B$를
+$$
+A = {2, 4, 6} \qquad B = {3, 6}
+$$
+으로 표현하면, $A \cap B = {6}, A \cup B = {2, 3, 4, 6}$이 된다. 여기에서
+$$
+\begin{align}
+P(A \cup B) &amp;= P(A) + P(B) - P(A \cap B) \\
+&amp;=\frac{3}{6} + \frac{2}{6} - \frac{1}{6} \\
+&amp;=\frac{2}{3}
+\end{align}
+$$
+와 같음을 알 수 있다.</p>
+<h3 id="예-110"><code>예 1.10</code><a hidden class="anchor" aria-hidden="true" href="#예-110">#</a></h3>
+<p>두 사건 $A$와 $B$가 표본공간 $S$에서 정의되어 있는데, 둘 중 적어도 한 사건이 일어날 확률이 0.3이고 $A$만 일어날 확률이 0.1이라고 하자. 이때 $P(A \cup B) = P(B) + P(A \cap B^c)$이므로 $P(B) = 0.3 - 0.1 = 0.2$가 된다.</p>
+<h3 id="예-111"><code>예 1.11</code><a hidden class="anchor" aria-hidden="true" href="#예-111">#</a></h3>
+<p>세 사건 $A, B, C$가 표본공간 $S$에서 정의되어 있을 때, <a href="#%EC%A0%95%EB%A6%AC-11">정리 1.1</a>의 (4)에 의해
+$$
+\begin{align}
+P(A \cup B \cup C) =&amp; P((A \cup B) \cup C) \\
+=&amp; P(A \cup B) + P(C) - P((A \cup B) \cap C) \\
+=&amp; P(A) + P(B) - P(A \cap B) + P(C) \\ &amp;- P((A \cap C) \cup (B \cap C)) \\
+=&amp; P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) \\ &amp;- P(B \cap C) + P(A \cap B \cap C) \\
+\end{align}
+$$
+이므로 다음이 성립한다.
+$$
+P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(B \cap C) - P(A \cap C) + P(A \cap B \cap C)
+$$</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://WooHyeok-Moon.github.io/tags/%ED%99%95%EB%A5%A0/">확률</a></li>
+    </ul>
+    
+  </footer>
+  <div class="container_disqus" style="margin: 30px 0px 0px 0px;">
+      <script src="https://giscus.app/client.js"
+          data-repo=WooHyeok-Moon/blog-comments
+          data-repo-id=R_kgDOJrdphg
+          data-category=Comments
+          data-category-id=DIC_kwDOJrdphs4CXA2h
+          data-mapping=pathname
+          data-reactions-enabled=1
+          data-emit-metadata=0
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="ko"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+      </script>
+  </div>
+  <script async>
+      document.querySelector("div.container_disqus > script").setAttribute('data-theme', localStorage.getItem('pref-theme') ? localStorage.getItem('pref-theme') : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
+  
+      document.querySelector('#theme-toggle').addEventListener('click', () => {
+          let g = document.querySelector('iframe.giscus-frame')
+          if (g) {
+              g.contentWindow.postMessage({
+                  giscus: {
+                      setConfig: {
+                          theme: localStorage.getItem('pref-theme') ? ((localStorage.getItem('pref-theme') === 'dark') ? 'light': 'dark') : (document.body.className.includes("dark") ? 'light' : 'dark')
+                      }
+                  }
+              }, 'https://giscus.app');
+          }
+      })
+  </script>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://WooHyeok-Moon.github.io/">Axiomize</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
