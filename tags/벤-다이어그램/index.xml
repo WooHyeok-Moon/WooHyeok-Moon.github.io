@@ -11,11 +11,11 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr</language>
-    <lastBuildDate>Tue, 06 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/tags/%EB%B2%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/tags/%EB%B2%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>표본공간과 사건</title>
       <link>https://WooHyeok-Moon.github.io/posts/sm1/</link>
-      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://WooHyeok-Moon.github.io/posts/sm1/</guid>
       <description>1. 확률이론 1.1 표본공간과 사건 키워드 실험: 어떤 현상의 관찰결과를 얻기 위한 과정 표본공간($S$): 모든 관찰 가능한 결과의 집합 사건: 표본공간의 부분집합 정의 1.1 사건 $A$와 $B$가 표본공간 $S$상에 정의되었다고 하자.
