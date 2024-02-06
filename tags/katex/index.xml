@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>KaTex on Axiomize</title>
+    <link>https://WooHyeok-Moon.github.io/tags/katex/</link>
+    <description>Recent content in KaTex on Axiomize</description>
+    <image>
+      <title>Axiomize</title>
+      <url>https://WooHyeok-Moon.github.io/papermod-cover.png</url>
+      <link>https://WooHyeok-Moon.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr</language>
+    <lastBuildDate>Tue, 06 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/tags/katex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>마크다운(markdown) KaTex 공식 정렬 시 번호 제거</title>
+      <link>https://WooHyeok-Moon.github.io/posts/md1/</link>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/posts/md1/</guid>
+      <description>마크다운에서 아래와 같이 식을 정렬하고 싶을 때가 있다.
+$$ f(x) = ax_1 + bx_2 = cx_3 + dx_4 = ex_5 + fx_6\\\ \downarrow\\\ \begin{align} f(x) &amp;amp;= ax_1 + bx_2\\\ &amp;amp;= cx_3 + dx_4\\\ &amp;amp;= ex_5 + fx_6\\\ \end{align} $$ $$ f(x) = ax_1 + bx_2 = cx_3 + dx_4 = ex_5 + fx_6\\ \downarrow\\ \begin{align} f(x) &amp;amp;= ax_1 + bx_2\\ &amp;amp;= cx_3 + dx_4\\ &amp;amp;= ex_5 + fx_6\\ \end{align} $$</description>
+    </item>
+    
+  </channel>
+</rss>

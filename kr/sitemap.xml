@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://WooHyeok-Moon.github.io/posts/md1/</loc>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://WooHyeok-Moon.github.io/posts/sm2/</loc>
     <lastmod>2024-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -37,6 +40,9 @@
                 href="https://WooHyeok-Moon.github.io/categories/"
                 />
   </url><url>
+    <loc>https://WooHyeok-Moon.github.io/tags/katex/</loc>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://WooHyeok-Moon.github.io/posts/</loc>
     <lastmod>2024-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -62,6 +68,9 @@
                 hreflang="kr"
                 href="https://WooHyeok-Moon.github.io/tags/"
                 />
+  </url><url>
+    <loc>https://WooHyeok-Moon.github.io/categories/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4/</loc>
+    <lastmod>2024-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://WooHyeok-Moon.github.io/categories/%EC%88%98%EB%A6%AC%ED%86%B5%EA%B3%84%ED%95%99/</loc>
     <lastmod>2024-02-06T00:00:00+00:00</lastmod>
