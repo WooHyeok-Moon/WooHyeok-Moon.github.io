@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>spatio-temporal data on Axiomize</title>
+    <link>https://WooHyeok-Moon.github.io/tags/spatio-temporal-data/</link>
+    <description>Recent content in spatio-temporal data on Axiomize</description>
+    <image>
+      <title>Axiomize</title>
+      <url>https://WooHyeok-Moon.github.io/papermod-cover.png</url>
+      <link>https://WooHyeok-Moon.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr</language>
+    <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/tags/spatio-temporal-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>환경 데이터 종류</title>
+      <link>https://WooHyeok-Moon.github.io/posts/si1/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/posts/si1/</guid>
+      <description>Basics of Environmental Data 1) 환경 데이터 특징 1.1) 시계열 데이터 (Time-series data) continous한 시간 간격에 따른 데이터. 시간, 일 또는 월 별 데이터와 같이 규칙적일 수도 있고, interval 자체가 불규칙적일 수도 있다.
+예시:
+계절, 연 단위의 강우량 변화 강, 호수, 댐 등의 수위 호수나 시냇물의 유량 pH, 혼탁도, 오염도 등과 같은 수질 시계열 데이터 특성:
+시간 종속성(Temporal dependency): 일반적인 데이터와 다르게 시계열 데이터는 고려해야 할 X(독립 변수) 시간 경과에 따른 특징이 존재하며, 이를 통해 유용한 정보를 얻을 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>
