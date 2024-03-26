@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="kr" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>랜덤 프로세스 | Axiomize</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="woohyeok Moon">
+<link rel="canonical" href="https://WooHyeok-Moon.github.io/categories/%EB%9E%9C%EB%8D%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://WooHyeok-Moon.github.io/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://WooHyeok-Moon.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://WooHyeok-Moon.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://WooHyeok-Moon.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://WooHyeok-Moon.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://WooHyeok-Moon.github.io/categories/%EB%9E%9C%EB%8D%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/index.xml">
+<link rel="alternate" hreflang="kr" href="https://WooHyeok-Moon.github.io/categories/%EB%9E%9C%EB%8D%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+        {left: "\\begin{align}", right: "\\end{align}", display: true},
+        {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+        {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+        {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+        {left: "\\[", right: "\\]", display: true}
+        ]
+    });
+});
+</script>
+<meta property="og:title" content="랜덤 프로세스" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://WooHyeok-Moon.github.io/categories/%EB%9E%9C%EB%8D%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/" /><meta property="og:image" content="https://WooHyeok-Moon.github.io/papermod-cover.png"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://WooHyeok-Moon.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="랜덤 프로세스"/>
+<meta name="twitter:description" content=""/>
+
+</head>
+
+<body class="list dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://WooHyeok-Moon.github.io/" accesskey="h" title="Axiomize (Alt + H)">
+                    <img src="https://WooHyeok-Moon.github.io/img/logo_hu203c9d87d740bff47b63115688d6fb40_16148_0x120_resize_box_3.png" alt="" aria-label="logo"
+                        style="margin-top: 9px;"
+                        height="45">
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://WooHyeok-Moon.github.io/en/" title="EN"
+                            aria-label="EN">EN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/about/" title="소개">
+                    <span>소개</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/search/" title="검색">
+                    <span>검색</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/categories/" title="카테고리">
+                    <span>카테고리</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://WooHyeok-Moon.github.io/tags/" title="태그">
+                    <span>태그</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://WooHyeok-Moon.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://WooHyeok-Moon.github.io/categories/">Categories</a></div>
+  <h1>
+    랜덤 프로세스
+    <a href="/categories/%EB%9E%9C%EB%8D%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>랜덤 프로세스 내용
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Lecture 1 Relative Frequency Interpretation Set Theory Applying Set Theory to Probability Probability Axioms Lecture 2 Conditional Probability Law of Total Probability Bayes Theorem Statistical Independence Bernoulli Trials Reliability Problems Lecture 3 Bernulli trials, Binomial, and Poisson law De Moivre-Laplace Theorem Probability Review Summary Lecture 4 Definitions of Random Variable Examples of Random Variable Cumulative Distribution Function Probability Density Function Probability Mass Function Continuous-Type Random Variables Discrete-Type Random Variables Lecture 5 Two Random Variables Random Vector Complex Random Variable Conditional Distributions/Densities Independence of Random Variables Functions of Random Variables Functions of Random Vectors Lecture 6 Expected Value of a Random Variable Moments of Random Variable Uncorrelated and Orthogonal Random Variables Markov Inequality Chebyshev (Tschebysheff) Inequality Moment Generation Function (MGF) and Characteristic Fuction Characteristic Function for a Random Vector Characteristic Function Example Lecture 7 Conditional Expectation Application of Expectation-Estimation Communication Theory Example Linear minimum mean squared error(LMMSE) estimator LMMSE Estimator from a Random Vector Lecture 8 Expected Value Vector and Matrix Correlation and Covariance Matrix Cross-correlation and Cross-covariance Matrix Univariate Normal Random Variable Bivariate Normal Random Variables Multivariate Normal Random Variables Lecture 9 (pending) Lecture 10 (pending) </p>
+  </div>
+  <footer class="entry-footer">&lt;span title=&#39;2024-03-26 00:00:00 &#43;0000 UTC&#39;&gt;March 26, 2024&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;Woohyeok Moon</footer>
+  <a class="entry-link" aria-label="post link to 랜덤 프로세스 내용" href="https://WooHyeok-Moon.github.io/posts/rp0/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://WooHyeok-Moon.github.io/">Axiomize</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

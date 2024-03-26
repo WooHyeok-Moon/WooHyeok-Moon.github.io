@@ -11,9 +11,72 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>kr</language>
-    <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://WooHyeok-Moon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>spatial data</title>
+      <title>랜덤 프로세스</title>
+      <link>https://WooHyeok-Moon.github.io/tags/%EB%9E%9C%EB%8D%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/tags/%EB%9E%9C%EB%8D%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Measure of Location</title>
+      <link>https://WooHyeok-Moon.github.io/tags/measure-of-location/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/tags/measure-of-location/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Measure of Variability</title>
+      <link>https://WooHyeok-Moon.github.io/tags/measure-of-variability/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/tags/measure-of-variability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Measures of Distribution Symmetry</title>
+      <link>https://WooHyeok-Moon.github.io/tags/measures-of-distribution-symmetry/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/tags/measures-of-distribution-symmetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Outliers</title>
+      <link>https://WooHyeok-Moon.github.io/tags/outliers/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/tags/outliers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Summarizing Univariate Data</title>
+      <link>https://WooHyeok-Moon.github.io/tags/summarizing-univariate-data/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/tags/summarizing-univariate-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformations</title>
+      <link>https://WooHyeok-Moon.github.io/tags/transformations/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://WooHyeok-Moon.github.io/tags/transformations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatial Data</title>
       <link>https://WooHyeok-Moon.github.io/tags/spatial-data/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
       
@@ -22,7 +85,7 @@
     </item>
     
     <item>
-      <title>spatio-temporal data</title>
+      <title>Spatio-Temporal Data</title>
       <link>https://WooHyeok-Moon.github.io/tags/spatio-temporal-data/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
       
@@ -31,7 +94,7 @@
     </item>
     
     <item>
-      <title>time-series data</title>
+      <title>Time-Series Data</title>
       <link>https://WooHyeok-Moon.github.io/tags/time-series-data/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
       
